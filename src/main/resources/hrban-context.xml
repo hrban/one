@@ -17,6 +17,15 @@
           p:url="jdbc:mysql://localhost:3306/sampledb"
           p:username="root"
           p:password="yao110522" />
+    <bean id="car" class="com.hrban.Car"
+          init-method="myInit"
+          destroy-method="myDestroy"
+          p:brand="红旗CA72"
+          p:maxSpeed="220"/>
+    <bean id="myBeanPostProcessor"
+          class="MyBeanPostProcessor"/>
+    <bean id="myBeanFactoryPostProcessor"
+          class="MyBeanFactoryPostProcessor"/>
 
     <!-- 配置Jdbc模板  -->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
